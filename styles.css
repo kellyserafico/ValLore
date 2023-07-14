@@ -19,16 +19,23 @@ body{
     z-index: -1;
 }
 
-#agentBackgroundImg{
+#agentImage{
+    /* height: 900px; */
+    position: absolute;
+    /* top: 0px;
+    left: 0px; */
+}
+
+/* #agentBackground{
     height: 900px;
-    position: relative;
+    position: absolute;
     top: 0px;
     left: 0px;
-}
+} */
 
 #agentPic{
     height: 900px;
-    position: relative;
+    position: absolute;
     top: 0px;
     left: -0px;
 }

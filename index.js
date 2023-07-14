@@ -39,22 +39,22 @@ function createProfile(i){
     for(let j = 0; j < dataList[i]["abilities"].length; j++){
         //abilityName
         let currAbilityName = (dataList[i]["abilities"][j]["displayName"]);
-        // console.log(currAbilityName);
         let createAbilityName = document.getElementById("ability"+ j );
         createAbilityName.innerText = currAbilityName;
 
        // abilityDescription
         let currAbilityDescription = (dataList[i]["abilities"][j]["description"]);
-        // console.log(currAbilityDescription);
-        let createAbilityDescription = document.getElementById("ability" + j);
+        let createAbilityDescription = document.getElementById("abilityDescription" + j);
         createAbilityDescription.innerText = currAbilityDescription;
 
     }
 
-    if(dataList[i]["abilities"].length < 5){
-        let createAbilityName = document.getElementById("ability4");
-        createAbilityName.innerText = '';
+    if(dataList[i]["abilities"].length < 5){ // if agent does not have passive
+        let abilityName4 = document.getElementById("abilityName4");
+        abilityName4.innerText = '';
+        let abilityDescription4 = document.getElementById("abilityDescription4");
+        abilityDescription4.innerText = '';
     }
-
+    
 
 }
