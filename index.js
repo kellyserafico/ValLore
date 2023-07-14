@@ -24,8 +24,11 @@ $.get("https://valorant-api.com/v1/agents?isPlayableCharacter=true", function(da
     makeButtons();
 });
 
-function createProfile(i){
+function createProfile(i){ //!!! MAKE CALL DIFF FUNCTIONS
+    //description
     description.innerText = dataList[i]["description"];
+
+    //agentImage
     image.src = dataList[i]["fullPortraitV2"];
     agentBackground.src = dataList[i]["background"];
 
@@ -38,15 +41,20 @@ function createProfile(i){
 
     for(let j = 0; j < dataList[i]["abilities"].length; j++){
         //abilityName
+        
         let currAbilityName = (dataList[i]["abilities"][j]["displayName"]);
-        let createAbilityName = document.getElementById("ability"+ j );
+        let createAbilityName = document.getElementById("abilityName"+ j );
         createAbilityName.innerText = currAbilityName;
 
-       // abilityDescription
+        // abilityDescription
         let currAbilityDescription = (dataList[i]["abilities"][j]["description"]);
         let createAbilityDescription = document.getElementById("abilityDescription" + j);
         createAbilityDescription.innerText = currAbilityDescription;
 
+        //abilityImage
+        let currAbilityImage = (dataList[i]["abilities"][j]["displayIcon"]);
+        let createAbilityImage = document.getElementById("abilityImage" + j);
+        createAbilityImage.src = currAbilityImage;
     }
 
     if(dataList[i]["abilities"].length < 5){ // if agent does not have passive
@@ -54,6 +62,8 @@ function createProfile(i){
         abilityName4.innerText = '';
         let abilityDescription4 = document.getElementById("abilityDescription4");
         abilityDescription4.innerText = '';
+        // let abilityImage4 = document.getElementById("abilityImage4");  !!! some passive abilities do not have images
+        // abilityImage4.src = '';
     }
     
 
