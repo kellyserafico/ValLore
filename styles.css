@@ -1,7 +1,38 @@
 #description{
+    color:aliceblue;
+}
 
+button{
+    font-family: 'VALORANT', sans-serif;
+}
+body{
+    background-color: black;
+    color:aliceblue;
+    /* font-family: 'VALORANT', sans-serif; */
+}
+
+.display{
+    position:relative;
+    top:-100px;
+    left:0;
+    padding-top: 100px;
+    z-index: -1;
+}
+
+#agentBackgroundImg{
+    height: 900px;
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 
 #agentPic{
-    height: 600px;
+    height: 900px;
+    position: relative;
+    top: 0px;
+    left: -0px;
+}
+
+.abilities{
+    color:aliceblue;
 }
