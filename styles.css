@@ -21,6 +21,10 @@ button{
     width: 200px;
 
 }
+
+
+
+
 body{
     background-color: black;
     color:aliceblue;
@@ -31,36 +35,58 @@ body{
     position:relative;
     top:-100px;
     left:0;
-    padding-top: 100px;
+    /* padding-top: 100px; */
     z-index: -1;
+    border: 1px;
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align:center;
+   
     /* display: grid; */
 }
 
+.displayChild{
+    display: inline-block;
+    border: 1px solid red;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+}
 #fullAgentImage{
     /* height: 900px; */
     position: absolute;
-    top: 200px;
-    right: 0px;
+    top: 250px;
+    right: 200px;
 
 }
 
+.fullAgentImage-active{
+    animation: fly .2s linear 1;
+}
 
+@keyframes fly{
+    0%{
+        transform: translate(170px);
+    }
+
+}
 
 #agentPic{
-    height: 500px;
+    height: 700px;
     position: absolute;
     top: 0px;
     left: -0px;
+
+    /* animation: fly 5s linear infinite; */
+
 }
 
+
+
 #agentBackground{
-    height: 500px;
+    height: 700px;
     /* position:absolute; */
 }
 
-.abilities{
-    color:aliceblue;
-}
 
 #textDisplay{
     width:60%;
@@ -68,4 +94,19 @@ body{
 
 #imageDisplay{
     width:30%;
+}
+
+#abilityImage{
+    width: 100px;
+    /* top: 300px;
+    
+    padding: 30px; */
+}
+
+#abilityName{
+    font-family: 'VALORANT', sans-serif;
+}
+
+.abilityImageClass{
+    width:100px;
 }

@@ -12,6 +12,7 @@ function makeButtons(){
         let button = document.createElement('BUTTON');
         button.onclick = function(){
             createProfile(i);
+            
         }
         button.appendChild(text); //adds content to button
         names.appendChild(button); //appends button to div
@@ -54,7 +55,13 @@ function createProfile(i){ //!!! MAKE CALL DIFF FUNCTIONS
         //abilityImage
         let currAbilityImage = (dataList[i]["abilities"][j]["displayIcon"]);
         let createAbilityImage = document.getElementById("abilityImage" + j);
-        createAbilityImage.src = currAbilityImage;
+        if (currAbilityImage != null){
+            createAbilityImage.src = currAbilityImage;
+        }
+        else{
+            createAbilityImage.src = '';
+        }
+        
     }
 
     if(dataList[i]["abilities"].length < 5){ // if agent does not have passive
@@ -62,9 +69,16 @@ function createProfile(i){ //!!! MAKE CALL DIFF FUNCTIONS
         abilityName4.innerText = '';
         let abilityDescription4 = document.getElementById("abilityDescription4");
         abilityDescription4.innerText = '';
-        // let abilityImage4 = document.getElementById("abilityImage4");  !!! some passive abilities do not have images
-        // abilityImage4.src = '';
+        let abilityImage4 = document.getElementById("abilityImage4");
+        abilityImage4.src = '';
     }
+
+    
+    $('#fullAgentImage').addClass('fullAgentImage-active');
+    setTimeout(function(){
+        $('#fullAgentImage').removeClass('fullAgentImage-active');
+    }, 200);
+    
     
 
 }
