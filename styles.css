@@ -47,16 +47,21 @@ body{
 
 .displayChild{
     display: inline-block;
-    border: 1px solid red;
+    border: 1px solid rgb(255, 0, 0);
     padding: 1rem 1rem;
-    vertical-align: middle;
+    vertical-align: top;
+    /* position:absolute; */
 }
+
+
+
 #fullAgentImage{
     /* height: 900px; */
-    position: absolute;
-    top: 250px;
-    right: 200px;
+    position: absolute; 
+    top: 250px; 
+    left: 1300px;
 
+    /* margin-right: 300px; */
 }
 
 .fullAgentImage-active{
@@ -71,10 +76,10 @@ body{
 }
 
 #agentPic{
-    height: 700px;
+    height: 700px; /*dimensions*/
     position: absolute;
-    top: 0px;
-    left: -0px;
+    /* top: 0px;
+    left: -0px; */
 
     /* animation: fly 5s linear infinite; */
 
@@ -83,13 +88,16 @@ body{
 
 
 #agentBackground{
-    height: 700px;
+    height: 700px; /*dimensions*/
     /* position:absolute; */
 }
 
-
-#textDisplay{
-    width:60%;
+/* parent for childDisplay*/
+#leftDisplay{ 
+    width: 100px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:0px;
 }
 
 #imageDisplay{
@@ -97,7 +105,7 @@ body{
 }
 
 #abilityImage{
-    width: 100px;
+    width: 125px;
     /* top: 300px;
     
     padding: 30px; */
@@ -105,8 +113,14 @@ body{
 
 #abilityName{
     font-family: 'VALORANT', sans-serif;
+    font-size: 30px;
+    
+}
+
+.abilityNameClass{
+    padding-bottom: 60px;
 }
 
 .abilityImageClass{
-    width:100px;
+    width: 125px;
 }
