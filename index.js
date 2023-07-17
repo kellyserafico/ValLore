@@ -2,7 +2,10 @@ var dataList;
 var image = document.getElementById("agentPic");
 var description = document.getElementById("description");
 var agentBackground = document.getElementById("agentBackground");
-var abilityName = document.getElementById("abilityName");
+// var abilityName = document.getElementById("abilityName");
+var roleDescription = document.getElementById("roleDescription");
+var roleImage = document.getElementById("roleImage");
+var roleName = document.getElementById("roleName");
 
 function makeButtons(){
     let names = document.getElementById("names");
@@ -33,12 +36,15 @@ function createProfile(i){ //!!! MAKE CALL DIFF FUNCTIONS
     image.src = dataList[i]["fullPortraitV2"];
     agentBackground.src = dataList[i]["background"];
 
-
-
+    //role
+    roleImage.src = dataList[i]["role"]["displayIcon"];
+    roleName.innerText = dataList[i]["role"]["displayName"];
+    roleDescription.innerText = dataList[i]["role"]["description"];
+    
    // abilities
 
-    let abilitiesNameDiv = document.getElementById("abilityName");
-    let abilitiesDescriptionDiv = document.getElementById("abilityDescription");
+    // let abilitiesNameDiv = document.getElementById("abilityName");
+    // let abilitiesDescriptionDiv = document.getElementById("abilityDescription");
 
     for(let j = 0; j < dataList[i]["abilities"].length; j++){
         //abilityName
