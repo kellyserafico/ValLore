@@ -2,7 +2,7 @@ var dataList;
 var image = document.getElementById("agentPic");
 var description = document.getElementById("description");
 var agentBackground = document.getElementById("agentBackground");
-var abilityName = document.getElementById("abilityName");
+// var abilityName = document.getElementById("abilityName");
 var roleDescription = document.getElementById("roleDescription");
 var roleImage = document.getElementById("roleImage");
 var roleName = document.getElementById("roleName");
@@ -43,8 +43,8 @@ function createProfile(i){ //!!! MAKE CALL DIFF FUNCTIONS
     
    // abilities
 
-    let abilitiesNameDiv = document.getElementById("abilityName");
-    let abilitiesDescriptionDiv = document.getElementById("abilityDescription");
+    // let abilitiesNameDiv = document.getElementById("abilityName");
+    // let abilitiesDescriptionDiv = document.getElementById("abilityDescription");
 
     for(let j = 0; j < dataList[i]["abilities"].length; j++){
         //abilityName
